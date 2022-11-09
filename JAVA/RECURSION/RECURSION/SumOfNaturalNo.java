@@ -2,16 +2,19 @@ package RECURSION;
 
 public class SumOfNaturalNo {
 
-    public static int printSum(int n, int i, int sum) {
+    public static void printSum(int n, int i, int sum) {
         if (i != n) {
-            sum = sum + i;
+            sum += i;
             printSum(n, i + 1, sum);
+            return;
         }
-        return sum;
+        System.out.println("Sum = "+sum);;
     }
 
     public static void main(String[] args) {
         int n = 3;
-        System.out.println(printSum(n, 1, 0));
+        int i = 1;
+        int sum = 0;
+        printSum(n,i, sum);
     }
 }
